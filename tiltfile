@@ -1,0 +1,5 @@
+# Tiltfile for running Frigate in Kubernetes
+k8s_yaml('k8s/frigate-deployment.yaml')
+
+# Define local port forwarding for the Frigate UI
+k8s_resource('frigate', port_forwards=5000)
